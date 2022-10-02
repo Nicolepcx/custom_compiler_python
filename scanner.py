@@ -64,8 +64,11 @@ def main():
         "",
         "    print ( fibonacci ( 10 ) )",
         "    print ( faculty ( 10 ) )"]
+    test = ["testing",
+            "",
+            ""]
 
-    tokens = tokenize_text_array(text)
+    tokens = tokenize_text_array(test)
     print_tokens(tokens)
 
 

@@ -31,6 +31,7 @@ class Token:
     string_val = TOKEN.NONE
 
     def get_type(self):
+        print('string value:', self.string_val)
         return self.string_val
 
     def get_data(self):
