@@ -1,5 +1,5 @@
 def faculty(x):
-    if (x>0): 
+    if (x>0):
         return x * faculty(x-1)
     return 1
 def fibonacci (n):

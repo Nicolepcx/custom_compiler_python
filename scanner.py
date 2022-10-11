@@ -51,9 +51,6 @@ def match(next_char,mat):
     if curr_char.isalnum() and (len(mat) < 1 or next_char.isalnum()):
         return None
     tok_type = Token.get_token_type(mat)
-
-    if  curr_char == "\n": 
-        return None
     
     #is it a Keyword
     if  tok_type != TOKEN.NONE:

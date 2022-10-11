@@ -7,7 +7,6 @@ class TOKEN(Enum):
     IDENTIFIER = 2
     SPACE = 3
     CONTEXT = 4
-    NEWLINE = 5
 
     #Terminal Keyword
     #KEYWORDS
@@ -30,12 +29,10 @@ class TOKEN(Enum):
     BRACKET_RIGHT = 207
     ADDITION = 208
     SUBTRACTION = 209
-    TIMES =  210
-    DIVIDED_BY = 211
-    COMMA = 212
-    EQUALITY = 213
-    LESS_THAN = 214
-    GREATER_THAN = 215
+    COMMA = 210
+    EQUALITY = 211
+    LESS_THAN = 212
+    GREATER_THAN = 213
 
 
 class Token:
@@ -67,15 +64,10 @@ class Token:
             case "]": return TOKEN.SQUARE_BRACKET_RIGHT
             case "(": return TOKEN.CURLY_BRACKET_LEFT
             case ")": return TOKEN.CURLY_BRACKET_RIGHT
-            case "*": return TOKEN.TIMES
-            case "/": return TOKEN.DIVIDED_BY
             case "+": return TOKEN.ADDITION
             case "-": return TOKEN.SUBTRACTION
             case "==": return TOKEN.EQUALITY
             case ",": return TOKEN.COMMA
-            case "<": return TOKEN.LESS_THAN
-            case ">": return TOKEN.GREATER_THAN
-            case "\n": return TOKEN.NEWLINE
             case "return": return TOKEN.RETURN
         # TODO return a is not a string exception.
         return TOKEN.NONE
