@@ -6,6 +6,7 @@ from scanner import *
 #TODO Error Correction. This program assumes perfect input, which is unlikely.
 #TODO  operators
 
+#takes tokens and constructs a tree, with the origin node as return value
 def parse(tokens):
     origin = Token()
     buffer = []
@@ -21,6 +22,7 @@ def parse(tokens):
     return origin
 
 
+#branch-patternb TOKEN.DEF TOKEN.VARIABLE TOKEN.(  variable_pattern TOKEN.) TOKEN : statements
 def function_branch(parent, tokens): #IF function is almost identical
     ftok = tokens[0]
     parent.children.append(ftok)
@@ -37,9 +39,12 @@ def variable_declaration(parent,tokens):
             parent.append(tokens[index])
             
 
-
+#branch pattern VALUE OPERATOR statements
 def expression_branch(parent, tokens):
-    pass
+#    pass
+#    if is_variable(tokens[i]) and len(tokens)>1:
+#        if tokens[i+1] == Token.is_operator():
+#            parent.children.append(tokens[i])
 
 
 
