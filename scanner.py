@@ -1,13 +1,10 @@
 from token import *
 
 
-# TODO ERROR find bug string_val' is not defined
-# TODO INDENTS
-# TODO Subdivide functions to be smaller
 # TODO Make Code prettier.
+# TODO Error handler
 
 # takes an array of text and
-
 def tokenize_line(line):
     tokens = []
     i = 0
