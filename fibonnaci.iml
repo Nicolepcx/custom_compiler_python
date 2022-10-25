@@ -1,0 +1,28 @@
+program Fibonacci()
+global
+    fun fib(in n: int64) returns results: int64[]
+    local
+        var i: int64
+    do
+        results init := int64[n];
+        i init := 0 ;
+        while i < n do
+            if i < 2 then
+                results[i] := 1
+            else
+                results[i] := results[i-1] + results[i-2]
+            endif
+        endwhile
+    endfun;
+    const results: int64[]
+do
+    results init := fib(10)
+    debugout result[0]; // 1
+    debugout result[1]; // 1
+    debugout result[2]; // 2
+    debugout result[3]; // 3
+    debugout result[4]; // 5
+    debugout result[5]; // 8
+    debugout result[6]; // 13
+endprogram
+ascvk myxcokmvy131221e1compiler|@#|@#@shouldnt allow tzhis
