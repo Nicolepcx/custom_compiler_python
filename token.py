@@ -98,7 +98,7 @@ class Token:
         return self.keyword
 
     def get_keyword(self):
-        return keyword
+        return self.keyword
 
     def __init__(self, keyword=TOKEN.NONE):
         self.keyword = keyword
