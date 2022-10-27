@@ -81,7 +81,7 @@ def get_bracket_contents(tokens):
 def get_subcontext_contents(tokens, index, indent_level):
     content = []
     indent = indent + 1
-    while len(tokens) >= index and indent_leve > indent:
+    while len(tokens) >= index and indent_level > indent:
         token = tokens[index]
         if (token == TOKEN.INDENT):
             indent = token.level
